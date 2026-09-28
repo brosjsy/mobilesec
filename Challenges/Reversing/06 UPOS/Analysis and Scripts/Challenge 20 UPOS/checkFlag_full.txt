@@ -1,0 +1,843 @@
+=== checkFlag === regs=30 ins=2 outs=3 units=1371
+  [0000] move-object/from16   v1, v28
+  [0002] move-object/from16   v2, v29
+  [0004] const-string         v3, " "
+  [0006] const-string         v4, "mayb"
+  [0008] move-object          v5, v1
+  [0009] check-cast           v5, Lcom/mobisec/upos/MainActivity;
+  [000b] invoke-static        {v5}, Landroid/support/v7/app/Activity;->initActivity  (argc=1)
+  [000e] sput-object          v1, Lcom/mobisec/upos/FC;->ctx
+  [0010] const/16             v5, #200
+  [0012] new-array            v5, v5, [Z
+  [0014] new-instance         v6, Lcom/mobisec/upos/Streamer;
+  [0016] invoke-direct        {v6}, Lcom/mobisec/upos/Streamer;-><init>  (argc=1)
+  [0019] const/4              v7, #0
+  [001a] const/4              v8, #0
+  [001b] sget-object          v10, Lcom/mobisec/upos/FC;->m
+  [001d] invoke-static        {v10}, Lcom/mobisec/upos/FC;->lm  (argc=1)
+  [0020] invoke-virtual/range v29..v29, Ljava/lang/String;->length (argc=1)
+  [0023] move-result          v10
+  [0024] const/16             v11, #69
+  [0026] if-eq                v10, v11, +3 (target unit 41)
+  [0028] return               v8
+  [0029] add-int/lit8         v10, v7, #1
+  [002b] const-string         v11, "MOBISEC{"
+  [002d] invoke-virtual       {v2, v11}, Ljava/lang/String;->startsWith  (argc=2)
+  [0030] move-result          v11
+  [0031] aput-boolean         v11, v5, v7
+  [0033] const/16             v7, #8
+  [0035] invoke-virtual       {v2, v7}, Ljava/lang/String;->substring  (argc=2)
+  [0038] move-result-object   v11
+  [0039] add-int/lit8         v12, v10, #1
+  [003b] const-string         v13, "}"
+  [003d] invoke-virtual       {v11, v13}, Ljava/lang/String;->endsWith  (argc=2)
+  [0040] move-result          v13
+  [0041] aput-boolean         v13, v5, v10
+  [0043] const/4              v10, #1
+  [0044] invoke-virtual       {v6}, Lcom/mobisec/upos/Streamer;->step  (argc=1)
+  [0047] sget-boolean         v15, Lcom/mobisec/upos/MainActivity;->g2
+  [0049] if-eqz               v15, +3 (target unit 76)
+  [004b] return               v8
+  [004c] invoke-virtual       {v6}, Lcom/mobisec/upos/Streamer;->step  (argc=1)
+  [004f] invoke-virtual       {v6}, Lcom/mobisec/upos/Streamer;->step  (argc=1)
+  [0052] add-int/lit8         v15, v12, #1
+  [0054] const-string         v7, "this_is_"
+  [0056] invoke-virtual       {v11, v7}, Ljava/lang/String;->startsWith  (argc=2)
+  [0059] move-result          v7
+  [005a] aput-boolean         v7, v5, v12
+  [005c] add-int/lit8         v7, v15, #1
+  [005e] const-string         v12, "upos"
+  [0060] invoke-virtual       {v11, v12}, Ljava/lang/String;->endsWith  (argc=2)
+  [0063] move-result          v12
+  [0064] aput-boolean         v12, v5, v15
+  [0066] add-int/lit8         v12, v7, #1
+  [0068] const/16             v15, #10
+  [006a] invoke-virtual       {v11, v15}, Ljava/lang/String;->charAt  (argc=2)
+  [006d] move-result          v9
+  [006e] const/16             v14, #99
+  [0070] const/16             v15, #13
+  [0072] if-eq                v9, v14, +13 (target unit 127)
+  [0074] invoke-virtual       {v11, v15}, Ljava/lang/String;->charAt  (argc=2)
+  [0077] move-result          v9
+  [0078] const/16             v14, #113
+  [007a] if-ne                v9, v14, +3 (target unit 125)
+  [007c] goto                 
+  [007d] const/4              v9, #0
+  [007e] goto                 
+  [007f] const/4              v9, #1
+  [0080] aput-boolean         v9, v5, v7
+  [0082] add-int/lit8         v7, v12, #1
+  [0084] const/4              v9, #3
+  [0085] invoke-virtual       {v11, v9}, Ljava/lang/String;->charAt  (argc=2)
+  [0088] move-result          v9
+  [0089] const/4              v14, #7
+  [008a] invoke-virtual       {v11, v14}, Ljava/lang/String;->charAt  (argc=2)
+  [008d] move-result          v14
+  [008e] add-int/2addr        
+  [008f] const/16             v14, #114
+  [0091] if-ne                v9, v14, +4 (target unit 149)
+  [0093] const/4              v9, #1
+  [0094] goto                 
+  [0095] const/4              v9, #0
+  [0096] aput-boolean         v9, v5, v12
+  [0098] invoke-virtual       {v6}, Lcom/mobisec/upos/Streamer;->step  (argc=1)
+  [009b] add-int/lit8         v9, v7, #1
+  [009d] const-string         v12, "really_"
+  [009f] invoke-virtual       {v11, v12}, Ljava/lang/String;->contains  (argc=2)
+  [00a2] move-result          v12
+  [00a3] aput-boolean         v12, v5, v7
+  [00a5] const/4              v7, #0
+  [00a6] new-instance         v12, Ljava/lang/StringBuilder;
+  [00a8] invoke-direct        {v12}, Ljava/lang/StringBuilder;-><init>  (argc=1)
+  [00ab] const                v14, #2131427368
+  [00ae] invoke-virtual       {v1, v14}, Landroid/content/Context;->getString  (argc=2)
+  [00b1] move-result-object   v14
+  [00b2] invoke-static        {v14}, Lcom/mobisec/upos/FC;->dec  (argc=1)
+  [00b5] move-result-object   v14
+  [00b6] invoke-virtual       {v12, v14}, Ljava/lang/StringBuilder;->append  (argc=2)
+  [00b9] invoke-virtual       {v12, v3}, Ljava/lang/StringBuilder;->append  (argc=2)
+  [00bc] const                v14, #2131427369
+  [00bf] invoke-virtual       {v1, v14}, Landroid/content/Context;->getString  (argc=2)
+  [00c2] move-result-object   v20
+  [00c3] invoke-static/range  v20..v20, Lcom/mobisec/upos/FC;->dec (argc=1)
+  [00c6] move-result-object   v8
+  [00c7] invoke-virtual       {v12, v8}, Ljava/lang/StringBuilder;->append  (argc=2)
+  [00ca] invoke-virtual       {v12}, Ljava/lang/StringBuilder;->toString  (argc=1)
+  [00cd] move-result-object   v8
+  [00ce] invoke-static        {v8}, Lcom/mobisec/upos/FC;->ec  (argc=1)
+  [00d1] move-result-object   v8
+  [00d2] const-string         v12, "
+"
+  [00d4] invoke-virtual       {v8, v12}, Ljava/lang/String;->split  (argc=2)
+  [00d7] move-result-object   v8
+  [00d8] array-length         v12, v8
+  [00d9] const/4              v15, #0
+  [00da] if-ge                v15, v12, +94 (target unit 312)
+  [00dc] aget-object          v22, v8, v15
+  [00de] move-object/from16   v23, v22
+  [00e0] new-instance         v13, Ljava/lang/StringBuilder;
+  [00e2] invoke-direct        {v13}, Ljava/lang/StringBuilder;-><init>  (argc=1)
+  [00e5] const                v14, #2131427370
+  [00e8] invoke-virtual       {v1, v14}, Landroid/content/Context;->getString  (argc=2)
+  [00eb] move-result-object   v14
+  [00ec] invoke-static        {v14}, Lcom/mobisec/upos/FC;->dec  (argc=1)
+  [00ef] move-result-object   v14
+  [00f0] invoke-virtual       {v13, v14}, Ljava/lang/StringBuilder;->append  (argc=2)
+  [00f3] invoke-virtual       {v13, v3}, Ljava/lang/StringBuilder;->append  (argc=2)
+  [00f6] const                v14, #2131427369
+  [00f9] invoke-virtual       {v1, v14}, Landroid/content/Context;->getString  (argc=2)
+  [00fc] move-result-object   v24
+  [00fd] invoke-static/range  v24..v24, Lcom/mobisec/upos/FC;->dec (argc=1)
+  [0100] move-result-object   v14
+  [0101] invoke-virtual       {v13, v14}, Ljava/lang/StringBuilder;->append  (argc=2)
+  [0104] const-string         v14, "/"
+  [0106] invoke-virtual       {v13, v14}, Ljava/lang/StringBuilder;->append  (argc=2)
+  [0109] move-object/from16   v14, v23
+  [010b] invoke-virtual       {v13, v14}, Ljava/lang/StringBuilder;->append  (argc=2)
+  [010e] const-string         v2, "/maps"
+  [0110] invoke-virtual       {v13, v2}, Ljava/lang/StringBuilder;->append  (argc=2)
+  [0113] invoke-virtual       {v13}, Ljava/lang/StringBuilder;->toString  (argc=1)
+  [0116] move-result-object   v2
+  [0117] invoke-static        {v2}, Lcom/mobisec/upos/FC;->ec  (argc=1)
+  [011a] move-result-object   v13
+  [011b] move-object/from16   v23, v2
+  [011d] const                v2, #2131427371
+  [0120] invoke-virtual       {v1, v2}, Landroid/content/Context;->getString  (argc=2)
+  [0123] move-result-object   v2
+  [0124] invoke-static        {v2}, Lcom/mobisec/upos/FC;->dec  (argc=1)
+  [0127] move-result-object   v2
+  [0128] invoke-virtual       {v13, v2}, Ljava/lang/String;->contains  (argc=2)
+  [012b] move-result          v2
+  [012c] if-eqz               v2, +4 (target unit 304)
+  [012e] const/4              v7, #1
+  [012f] goto                 
+  [0130] add-int/lit8         v15, v15, #1
+  [0132] move-object/from16   v2, v29
+  [0134] const                v14, #2131427369
+  [0137] goto                 
+  [0138] add-int/lit8         v2, v9, #1
+  [013a] aput-boolean         v7, v5, v9
+  [013c] add-int/lit8         v3, v2, #-1
+  [013e] aget-boolean         v3, v5, v3
+  [0140] if-nez               v3, +253 (target unit 573)
+  [0142] invoke-virtual       {v6}, Lcom/mobisec/upos/Streamer;->step  (argc=1)
+  [0145] add-int/lit8         v3, v2, #1
+  [0147] const/16             v9, #14
+  [0149] invoke-virtual       {v11, v9}, Ljava/lang/String;->substring  (argc=2)
+  [014c] move-result-object   v12
+  [014d] const-string         v9, "_evil"
+  [014f] invoke-virtual       {v12, v9}, Ljava/lang/String;->endsWith  (argc=2)
+  [0152] move-result          v9
+  [0153] aput-boolean         v9, v5, v2
+  [0155] add-int/lit8         v2, v3, #1
+  [0157] const/16             v9, #9
+  [0159] const/16             v12, #13
+  [015b] invoke-virtual       {v11, v9, v12}, Ljava/lang/String;->substring  (argc=3)
+  [015e] move-result-object   v9
+  [015f] const-string         v12, "bam"
+  [0161] invoke-virtual       {v9, v12}, Ljava/lang/String;->endsWith  (argc=2)
+  [0164] move-result          v9
+  [0165] aput-boolean         v9, v5, v3
+  [0167] invoke-virtual       {v6}, Lcom/mobisec/upos/Streamer;->step  (argc=1)
+  [016a] sget-boolean         v3, Lcom/mobisec/upos/MainActivity;->g4
+  [016c] if-eqz               v3, +4 (target unit 368)
+  [016e] const/4              v3, #0
+  [016f] return               v3
+  [0170] invoke-virtual       {v6}, Lcom/mobisec/upos/Streamer;->step  (argc=1)
+  [0173] nop                  
+  [0174] invoke-virtual/range v28..v28, Landroid/content/Context;->getPackageManager (argc=1)
+  [0177] move-result-object   v3
+  [0178] const/16             v8, #128
+  [017a] invoke-virtual       {v3, v8}, Landroid/content/pm/PackageManager;->getInstalledApplications  (argc=2)
+  [017d] move-result-object   v3
+  [017e] const/4              v7, #0
+  [017f] invoke-interface     {v3}, Ljava/util/List;->iterator  (argc=1)
+  [0182] move-result-object   v8
+  [0183] invoke-interface     {v8}, Ljava/util/Iterator;->hasNext  (argc=1)
+  [0186] move-result          v9
+  [0187] if-eqz               v9, +30 (target unit 421)
+  [0189] invoke-interface     {v8}, Ljava/util/Iterator;->next  (argc=1)
+  [018c] move-result-object   v9
+  [018d] check-cast           v9, Landroid/content/pm/ApplicationInfo;
+  [018f] iget-object          v12, v9, Landroid/content/pm/ApplicationInfo;->packageName
+  [0191] const                v13, #2131427372
+  [0194] invoke-virtual       {v1, v13}, Landroid/content/Context;->getString  (argc=2)
+  [0197] move-result-object   v13
+  [0198] invoke-static        {v13}, Lcom/mobisec/upos/FC;->dec  (argc=1)
+  [019b] move-result-object   v13
+  [019c] invoke-virtual       {v12, v13}, Ljava/lang/String;->equals  (argc=2)
+  [019f] move-result          v12
+  [01a0] if-eqz               v12, +4 (target unit 420)
+  [01a2] const/4              v7, #1
+  [01a3] goto                 
+  [01a4] goto                 
+  [01a5] add-int/lit8         v8, v2, #1
+  [01a7] aput-boolean         v7, v5, v2
+  [01a9] invoke-virtual       {v6}, Lcom/mobisec/upos/Streamer;->step  (argc=1)
+  [01ac] add-int/lit8         v2, v8, #1
+  [01ae] const/4              v9, #4
+  [01af] const/16             v12, #10
+  [01b1] invoke-virtual       {v11, v9, v12}, Ljava/lang/String;->substring  (argc=3)
+  [01b4] move-result-object   v9
+  [01b5] invoke-virtual       {v9}, Ljava/lang/String;->toLowerCase  (argc=1)
+  [01b8] move-result-object   v9
+  [01b9] const-string         v12, "incred"
+  [01bb] invoke-virtual       {v9, v12}, Ljava/lang/String;->equals  (argc=2)
+  [01be] move-result          v9
+  [01bf] aput-boolean         v9, v5, v8
+  [01c1] sget-boolean         v8, Lcom/mobisec/upos/MainActivity;->g1
+  [01c3] if-eqz               v8, +4 (target unit 455)
+  [01c5] const/4              v4, #0
+  [01c6] return               v4
+  [01c7] invoke-virtual       {v6}, Lcom/mobisec/upos/Streamer;->step  (argc=1)
+  [01ca] invoke-virtual       {v6}, Lcom/mobisec/upos/Streamer;->step  (argc=1)
+  [01cd] move-result          v8
+  [01ce] if-gtz               v8, +24 (target unit 486)
+  [01d0] sget-boolean         v8, Lcom/mobisec/upos/MainActivity;->g1
+  [01d2] if-eqz               v8, +20 (target unit 486)
+  [01d4] invoke-virtual       {v6}, Lcom/mobisec/upos/Streamer;->step  (argc=1)
+  [01d7] invoke-virtual       {v6}, Lcom/mobisec/upos/Streamer;->step  (argc=1)
+  [01da] invoke-virtual       {v6}, Lcom/mobisec/upos/Streamer;->step  (argc=1)
+  [01dd] invoke-virtual       {v6}, Lcom/mobisec/upos/Streamer;->step  (argc=1)
+  [01e0] invoke-virtual       {v6}, Lcom/mobisec/upos/Streamer;->step  (argc=1)
+  [01e3] nop                  
+  [01e4] goto/16              
+  [01e6] new-instance         v8, Ljava/util/IllformedLocaleException;
+  [01e8] invoke-direct        {v8}, Ljava/util/IllformedLocaleException;-><init>  (argc=1)
+  [01eb] throw                
+  [01ec] move-exception       
+  [01ed] move-object          v1, v0
+  [01ee] move                 v2, v8
+  [01ef] goto/16              
+  [01f1] move-exception       
+  [01f2] move-object          v1, v0
+  [01f3] move                 v2, v8
+  [01f4] goto/16              
+  [01f6] move-exception       
+  [01f7] move-object          v1, v0
+  [01f8] move                 v2, v8
+  [01f9] const/4              v3, #1
+  [01fa] goto/16              
+  [01fc] move-exception       
+  [01fd] move-object          v1, v0
+  [01fe] move                 v2, v8
+  [01ff] const/4              v3, #1
+  [0200] goto/16              
+  [0202] move-exception       
+  [0203] move-object          v1, v0
+  [0204] move                 v2, v8
+  [0205] const/4              v3, #1
+  [0206] goto/16              
+  [0208] move-exception       
+  [0209] move-object          v2, v0
+  [020a] move                 v9, v8
+  [020b] goto/16              
+  [020d] move-exception       
+  [020e] move-object          v2, v0
+  [020f] move                 v9, v8
+  [0210] goto/16              
+  [0212] move-exception       
+  [0213] move-object          v1, v0
+  [0214] move                 v2, v3
+  [0215] goto/16              
+  [0217] move-exception       
+  [0218] move-object          v1, v0
+  [0219] move                 v2, v3
+  [021a] goto/16              
+  [021c] move-exception       
+  [021d] move-object          v1, v0
+  [021e] move                 v2, v3
+  [021f] const/4              v3, #1
+  [0220] goto/16              
+  [0222] move-exception       
+  [0223] move-object          v1, v0
+  [0224] move                 v2, v3
+  [0225] const/4              v3, #1
+  [0226] goto/16              
+  [0228] move-exception       
+  [0229] move-object          v1, v0
+  [022a] move                 v2, v3
+  [022b] const/4              v3, #1
+  [022c] goto/16              
+  [022e] move-exception       
+  [022f] move-object          v2, v0
+  [0230] move                 v9, v3
+  [0231] goto/16              
+  [0233] move-exception       
+  [0234] move-object          v2, v0
+  [0235] move                 v9, v3
+  [0236] goto/16              
+  [0238] move-exception       
+  [0239] move-object          v2, v0
+  [023a] move                 v9, v3
+  [023b] goto/16              
+  [023d] new-instance         v3, Ljava/sql/BatchUpdateException;
+  [023f] invoke-direct        {v3}, Ljava/sql/BatchUpdateException;-><init>  (argc=1)
+  [0242] throw                
+  [0243] move-exception       
+  [0244] move                 v9, v2
+  [0245] move-object          v2, v0
+  [0246] goto/16              
+  [0248] move-exception       
+  [0249] move                 v9, v2
+  [024a] move-object          v2, v0
+  [024b] goto/16              
+  [024d] move-exception       
+  [024e] move                 v9, v2
+  [024f] move-object          v2, v0
+  [0250] goto                 
+  [0251] move-exception       
+  [0252] move-object          v1, v0
+  [0253] move                 v2, v9
+  [0254] goto/16              
+  [0256] move-exception       
+  [0257] move-object          v1, v0
+  [0258] move                 v2, v9
+  [0259] goto/16              
+  [025b] move-exception       
+  [025c] move-object          v1, v0
+  [025d] move                 v2, v9
+  [025e] const/4              v3, #1
+  [025f] goto/16              
+  [0261] move-exception       
+  [0262] move-object          v1, v0
+  [0263] move                 v2, v9
+  [0264] const/4              v3, #1
+  [0265] goto/16              
+  [0267] move-exception       
+  [0268] move-object          v1, v0
+  [0269] move                 v2, v9
+  [026a] const/4              v3, #1
+  [026b] goto/16              
+  [026d] move-exception       
+  [026e] move-object          v2, v0
+  [026f] goto/16              
+  [0271] move-exception       
+  [0272] move-object          v2, v0
+  [0273] goto/16              
+  [0275] move-exception       
+  [0276] move-object          v2, v0
+  [0277] goto                 
+  [0278] move-exception       
+  [0279] move-object          v2, v0
+  [027a] move                 v9, v7
+  [027b] goto                 
+  [027c] move-exception       
+  [027d] move-object          v2, v0
+  [027e] move                 v9, v12
+  [027f] const/4              v3, #0
+  [0280] return               v3
+  [0281] move-exception       
+  [0282] move-object          v2, v0
+  [0283] move                 v9, v7
+  [0284] goto                 
+  [0285] move-exception       
+  [0286] move-object          v2, v0
+  [0287] move                 v9, v7
+  [0288] goto                 
+  [0289] move-exception       
+  [028a] move-object          v1, v0
+  [028b] move                 v2, v15
+  [028c] goto/16              
+  [028e] move-exception       
+  [028f] move-object          v1, v0
+  [0290] move                 v2, v15
+  [0291] goto/16              
+  [0293] move-exception       
+  [0294] move-object          v1, v0
+  [0295] move                 v2, v15
+  [0296] const/4              v3, #1
+  [0297] goto/16              
+  [0299] move-exception       
+  [029a] move-object          v1, v0
+  [029b] move                 v2, v15
+  [029c] const/4              v3, #1
+  [029d] goto/16              
+  [029f] move-exception       
+  [02a0] move-object          v1, v0
+  [02a1] move                 v2, v15
+  [02a2] const/4              v3, #1
+  [02a3] goto/16              
+  [02a5] move-exception       
+  [02a6] move-object          v2, v0
+  [02a7] move                 v9, v15
+  [02a8] goto                 
+  [02a9] move-exception       
+  [02aa] move-object          v2, v0
+  [02ab] move                 v9, v15
+  [02ac] goto                 
+  [02ad] move-exception       
+  [02ae] move-object          v2, v0
+  [02af] move                 v9, v12
+  [02b0] const/4              v3, #0
+  [02b1] return               v3
+  [02b2] move-exception       
+  [02b3] move-object          v2, v0
+  [02b4] move                 v9, v12
+  [02b5] add-int/lit8         v7, v9, #1
+  [02b7] const/16             v3, #22
+  [02b9] invoke-virtual       {v11, v3}, Ljava/lang/String;->substring  (argc=2)
+  [02bc] move-result-object   v8
+  [02bd] invoke-virtual       {v8}, Ljava/lang/String;->toUpperCase  (argc=1)
+  [02c0] move-result-object   v3
+  [02c1] invoke-virtual       {v3, v4}, Ljava/lang/String;->startsWith  (argc=2)
+  [02c4] move-result          v3
+  [02c5] aput-boolean         v3, v5, v9
+  [02c7] invoke-virtual       {v6}, Lcom/mobisec/upos/Streamer;->step  (argc=1)
+  [02ca] add-int/lit8         v3, v7, #-3
+  [02cc] aget-boolean         v3, v5, v3
+  [02ce] if-eqz               v3, +546 (target unit 1264)
+  [02d0] sget-boolean         v3, Lcom/mobisec/upos/MainActivity;->g3
+  [02d2] if-eqz               v3, +7 (target unit 729)
+  [02d4] invoke-virtual       {v6}, Lcom/mobisec/upos/Streamer;->step  (argc=1)
+  [02d7] const/4              v3, #0
+  [02d8] return               v3
+  [02d9] invoke-virtual       {v6}, Lcom/mobisec/upos/Streamer;->step  (argc=1)
+  [02dc] const                v3, #2131427374
+  [02df] invoke-virtual       {v1, v3}, Landroid/content/Context;->getString  (argc=2)
+  [02e2] move-result-object   v3
+  [02e3] invoke-static        {v3}, Lcom/mobisec/upos/FC;->dec  (argc=1)
+  [02e6] move-result-object   v3
+  [02e7] invoke-static        {v3}, Ljava/lang/Class;->forName  (argc=1)
+  [02ea] move-result-object   v3
+  [02eb] const                v8, #2131427375
+  [02ee] invoke-virtual       {v1, v8}, Landroid/content/Context;->getString  (argc=2)
+  [02f1] move-result-object   v8
+  [02f2] invoke-static        {v8}, Lcom/mobisec/upos/FC;->dec  (argc=1)
+  [02f5] move-result-object   v8
+  [02f6] const/4              v9, #0
+  [02f7] new-array            v12, v9, [Ljava/lang/Class;
+  [02f9] invoke-virtual       {v3, v8, v12}, Ljava/lang/Class;->getMethod  (argc=3)
+  [02fc] move-result-object   v8
+  [02fd] const/4              v12, #0
+  [02fe] new-array            v13, v9, [Ljava/lang/Object;
+  [0300] invoke-virtual       {v8, v12, v13}, Ljava/lang/reflect/Method;->invoke  (argc=3)
+  [0303] move-result-object   v9
+  [0304] check-cast           v9, Ljava/lang/Boolean;
+  [0306] invoke-virtual       {v9}, Ljava/lang/Boolean;->booleanValue  (argc=1)
+  [0309] move-result          v9
+  [030a] aput-boolean         v9, v5, v7
+  [030c] goto                 
+  [030d] move-exception       
+  [030e] move-object          v3, v0
+  [030f] const/4              v8, #0
+  [0310] aput-boolean         v8, v5, v7
+  [0312] add-int/lit8         v7, v7, #1
+  [0314] add-int/lit8         v3, v7, #-1
+  [0316] aget-boolean         v3, v5, v3
+  [0318] if-nez               v3, +466 (target unit 1258)
+  [031a] const/4              v10, #0
+  [031b] move                 v2, v7
+  [031c] if-eqz               v10, +4 (target unit 800)
+  [031e] const/4              v3, #0
+  [031f] return               v3
+  [0320] add-int/lit8         v7, v2, #1
+  [0322] invoke-virtual       {v11}, Ljava/lang/String;->toLowerCase  (argc=1)
+  [0325] move-result-object   v3
+  [0326] const/16             v8, #11
+  [0328] const/16             v9, #14
+  [032a] invoke-virtual       {v3, v8, v9}, Ljava/lang/String;->substring  (argc=3)
+  [032d] move-result-object   v3
+  [032e] const/4              v8, #1
+  [032f] invoke-virtual       {v3, v8}, Ljava/lang/String;->charAt  (argc=2)
+  [0332] move-result          v3
+  [0333] const/16             v8, #52
+  [0335] if-ne                v3, v8, +4 (target unit 825)
+  [0337] const/4              v3, #1
+  [0338] goto                 
+  [0339] const/4              v3, #0
+  [033a] aput-boolean         v3, v5, v2
+  [033c] add-int/lit8         v2, v7, #1
+  [033e] const/16             v3, #22
+  [0340] invoke-virtual       {v11, v3}, Ljava/lang/String;->substring  (argc=2)
+  [0343] move-result-object   v3
+  [0344] invoke-virtual       {v3}, Ljava/lang/String;->toUpperCase  (argc=1)
+  [0347] move-result-object   v3
+  [0348] invoke-virtual       {v3, v4}, Ljava/lang/String;->startsWith  (argc=2)
+  [034b] move-result          v3
+  [034c] aput-boolean         v3, v5, v7
+  [034e] invoke-virtual/range v28..v28, Landroid/content/Context;->getPackageManager (argc=1)
+  [0351] move-result-object   v3
+  [0352] invoke-virtual/range v28..v28, Landroid/content/Context;->getPackageName (argc=1)
+  [0355] move-result-object   v4
+  [0356] const/16             v7, #64
+  [0358] const/4              v8, #0
+  [0359] invoke-virtual       {v3, v4, v7}, Landroid/content/pm/PackageManager;->getPackageInfo  (argc=3)
+  [035c] move-result-object   v9
+  [035d] move-object          v8, v9
+  [035e] goto                 
+  [035f] move-exception       
+  [0360] move-object          v9, v0
+  [0361] invoke-virtual       {v9}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace  (argc=1)
+  [0364] iget-object          v9, v8, Landroid/content/pm/PackageInfo;->signatures
+  [0366] const/4              v12, #0
+  [0367] aget-object          v13, v9, v12
+  [0369] invoke-virtual       {v13}, Landroid/content/pm/Signature;->toByteArray  (argc=1)
+  [036c] move-result-object   v12
+  [036d] new-instance         v13, Ljava/io/ByteArrayInputStream;
+  [036f] invoke-direct        {v13, v12}, Ljava/io/ByteArrayInputStream;-><init>  (argc=2)
+  [0372] const/4              v14, #0
+  [0373] const-string         v15, "X509"
+  [0375] invoke-static        {v15}, Ljava/security/cert/CertificateFactory;->getInstance  (argc=1)
+  [0378] move-result-object   v15
+  [0379] move-object          v14, v15
+  [037a] goto                 
+  [037b] move-exception       
+  [037c] move-object          v15, v0
+  [037d] invoke-virtual       {v15}, Ljava/security/cert/CertificateException;->printStackTrace  (argc=1)
+  [0380] const/4              v15, #0
+  [0381] invoke-virtual       {v14, v13}, Ljava/security/cert/CertificateFactory;->generateCertificate  (argc=2)
+  [0384] move-result-object   v18
+  [0385] check-cast           v18, Ljava/security/cert/X509Certificate;
+  [0387] move-object/from16   v15, v18
+  [0389] goto                 
+  [038a] move-exception       
+  [038b] move-object/from16   v18, v0
+  [038d] invoke-virtual/range v18..v18, Ljava/security/cert/CertificateException;->printStackTrace (argc=1)
+  [0390] const/16             v18, #0
+  [0392] const-string         v19, "SHA1"
+  [0394] invoke-static/range  v19..v19, Ljava/security/MessageDigest;->getInstance (argc=1)
+  [0397] move-result-object   v19
+  [0398] move-object/from16   v20, v19
+  [039a] move-object/from16   v19, v3
+  [039c] invoke-virtual       {v15}, Ljava/security/cert/X509Certificate;->getEncoded  (argc=1)
+  [039f] move-result-object   v3
+  [03a0] move-object/from16   v22, v4
+  [03a2] move-object/from16   v4, v20
+  [03a4] invoke-virtual       {v4, v3}, Ljava/security/MessageDigest;->digest  (argc=2)
+  [03a7] move-result-object   v3
+  [03a8] invoke-static        {v3}, Lcom/mobisec/upos/FC;->th  (argc=1)
+  [03ab] move-result-object   v20
+  [03ac] move-object/from16   v18, v20
+  [03ae] move-object/from16   v3, v18
+  [03b0] goto                 
+  [03b1] move-exception       
+  [03b2] move-object          v3, v0
+  [03b3] goto                 
+  [03b4] move-exception       
+  [03b5] move-object          v3, v0
+  [03b6] goto                 
+  [03b7] move-exception       
+  [03b8] move-object/from16   v22, v4
+  [03ba] move-object          v3, v0
+  [03bb] goto                 
+  [03bc] move-exception       
+  [03bd] move-object/from16   v22, v4
+  [03bf] move-object          v3, v0
+  [03c0] goto                 
+  [03c1] move-exception       
+  [03c2] move-object/from16   v19, v3
+  [03c4] move-object/from16   v22, v4
+  [03c6] move-object          v3, v0
+  [03c7] invoke-virtual       {v3}, Ljava/security/cert/CertificateEncodingException;->printStackTrace  (argc=1)
+  [03ca] goto                 
+  [03cb] move-exception       
+  [03cc] move-object/from16   v19, v3
+  [03ce] move-object/from16   v22, v4
+  [03d0] move-object          v3, v0
+  [03d1] invoke-virtual       {v3}, Ljava/security/NoSuchAlgorithmException;->printStackTrace  (argc=1)
+  [03d4] nop                  
+  [03d5] move-object/from16   v3, v18
+  [03d7] add-int/lit8         v4, v2, #1
+  [03d9] move/from16          v18, v7
+  [03db] const                v7, #2131427373
+  [03de] invoke-virtual       {v1, v7}, Landroid/content/Context;->getString  (argc=2)
+  [03e1] move-result-object   v7
+  [03e2] invoke-virtual       {v3, v7}, Ljava/lang/String;->equals  (argc=2)
+  [03e5] move-result          v7
+  [03e6] aput-boolean         v7, v5, v2
+  [03e8] add-int/lit8         v2, v4, #-1
+  [03ea] aget-boolean         v2, v5, v2
+  [03ec] if-eqz               v2, +197 (target unit 1201)
+  [03ee] const/4              v2, #0
+  [03ef] aget-boolean         v7, v5, v2
+  [03f1] if-eqz               v7, +190 (target unit 1199)
+  [03f3] const/4              v2, #1
+  [03f4] aget-boolean         v7, v5, v2
+  [03f6] if-nez               v7, +4 (target unit 1018)
+  [03f8] goto/16              
+  [03fa] const/16             v2, #100
+  [03fc] const/4              v4, #0
+  [03fd] move                 v7, v2
+  [03fe] const/16             v2, #30
+  [0400] if-ge                v4, v2, +146 (target unit 1170)
+  [0402] const/4              v2, #1
+  [0403] aput-boolean         v2, v5, v7
+  [0405] new-instance         v2, Ljava/lang/StringBuilder;
+  [0407] invoke-direct        {v2}, Ljava/lang/StringBuilder;-><init>  (argc=1)
+  [040a] mul-int/lit8         
+  [040c] invoke-virtual       {v11, v1}, Ljava/lang/String;->charAt  (argc=2)
+  [040f] move-result          v1
+  [0410] invoke-static        {v1}, Ljava/lang/Character;->toString  (argc=1)
+  [0413] move-result-object   v1
+  [0414] invoke-virtual       {v2, v1}, Ljava/lang/StringBuilder;->append  (argc=2)
+  [0417] mul-int/lit8         
+  [0419] const/16             v17, #1
+  [041b] add-int/lit8         v1, v1, #1
+  [041d] invoke-virtual       {v11, v1}, Ljava/lang/String;->charAt  (argc=2)
+  [0420] move-result          v1
+  [0421] invoke-static        {v1}, Ljava/lang/Character;->toString  (argc=1)
+  [0424] move-result-object   v1
+  [0425] invoke-virtual       {v2, v1}, Ljava/lang/StringBuilder;->append  (argc=2)
+  [0428] invoke-virtual       {v2}, Ljava/lang/StringBuilder;->toString  (argc=1)
+  [042b] move-result-object   v1
+  [042c] invoke-static        {v4}, Lcom/mobisec/upos/FC;->ip  (argc=1)
+  [042f] move-result          v2
+  [0430] if-eqz               v2, +11 (target unit 1083)
+  [0432] const/4              v2, #0
+  [0433] if-ge                v2, v4, +8 (target unit 1083)
+  [0435] invoke-virtual       {v6}, Lcom/mobisec/upos/Streamer;->step  (argc=1)
+  [0438] add-int/lit8         v2, v2, #1
+  [043a] goto                 
+  [043b] invoke-virtual       {v6}, Lcom/mobisec/upos/Streamer;->g2  (argc=1)
+  [043e] move-result          v2
+  [043f] op_d5                
+  [0441] invoke-virtual       {v6}, Lcom/mobisec/upos/Streamer;->g2  (argc=1)
+  [0444] move-result          v20
+  [0445] const                v23, #65280
+  [0448] and-int              
+  [044a] const/16             v16, #8
+  [044c] op_e1                
+  [044e] invoke-static        {v1}, Lcom/mobisec/upos/FC;->r  (argc=1)
+  [0451] move-result-object   v23
+  [0452] invoke-static/range  v23..v23, Lcom/mobisec/upos/FC;->sq (argc=1)
+  [0455] move-result-wide     v23
+  [0456] sget-object          v25, Lcom/mobisec/upos/FC;->m
+  [0458] aget-object          v25, v25, v2
+  [045a] aget-wide            v26, v25, v20
+  [045c] cmp-long             
+  [045e] if-eqz               v25, +44 (target unit 1162)
+  [0460] add-int/lit8         v23, v7, #1
+  [0462] const/16             v21, #0
+  [0464] aput-boolean         v21, v5, v7
+  [0466] move/from16          v7, v23
+  [0468] goto                 
+  [0469] move-exception       
+  [046a] move-object          v1, v0
+  [046b] move/from16          v2, v23
+  [046d] goto/16              
+  [046f] move-exception       
+  [0470] move-object          v1, v0
+  [0471] move/from16          v2, v23
+  [0473] goto/16              
+  [0475] move-exception       
+  [0476] move-object          v1, v0
+  [0477] move/from16          v2, v23
+  [0479] const/4              v3, #1
+  [047a] goto/16              
+  [047c] move-exception       
+  [047d] move-object          v1, v0
+  [047e] move/from16          v2, v23
+  [0480] const/4              v3, #1
+  [0481] goto/16              
+  [0483] move-exception       
+  [0484] move-object          v1, v0
+  [0485] move/from16          v2, v23
+  [0487] const/4              v3, #1
+  [0488] goto/16              
+  [048a] add-int/lit8         v7, v7, #1
+  [048c] add-int/lit8         v4, v4, #1
+  [048e] move-object/from16   v1, v28
+  [0490] goto/16              
+  [0492] add-int/lit8         v1, v7, #-30
+  [0494] if-ge                v1, v7, +11 (target unit 1183)
+  [0496] aget-boolean         v2, v5, v1
+  [0498] if-nez               v2, +4 (target unit 1180)
+  [049a] const/4              v2, #0
+  [049b] return               v2
+  [049c] add-int/lit8         v1, v1, #1
+  [049e] goto                 
+  [049f] invoke-static/range  v29..v29, Lcom/mobisec/upos/FC;->h (argc=1)
+  [04a2] move-result-object   v1
+  [04a3] const-string         v2, "4193d9b72a5c4805e9a5cc739f8a8fc23b2890e13b83bb887d96f86c30654a12"
+  [04a5] invoke-virtual       {v1, v2}, Ljava/lang/String;->equals  (argc=2)
+  [04a8] move-result          v1
+  [04a9] if-nez               v1, +4 (target unit 1197)
+  [04ab] const/4              v1, #0
+  [04ac] return               v1
+  [04ad] const/4              v1, #1
+  [04ae] return               v1
+  [04af] const/4              v1, #0
+  [04b0] return               v1
+  [04b1] new-instance         v1, Ljava/security/GeneralSecurityException;
+  [04b3] invoke-direct        {v1}, Ljava/security/GeneralSecurityException;-><init>  (argc=1)
+  [04b6] throw                
+  [04b7] move-exception       
+  [04b8] move-object          v1, v0
+  [04b9] move                 v2, v4
+  [04ba] goto/16              
+  [04bc] move-exception       
+  [04bd] move-object          v1, v0
+  [04be] move                 v2, v4
+  [04bf] goto/16              
+  [04c1] move-exception       
+  [04c2] move-object          v1, v0
+  [04c3] move                 v2, v4
+  [04c4] const/4              v3, #1
+  [04c5] goto/16              
+  [04c7] move-exception       
+  [04c8] move-object          v1, v0
+  [04c9] move                 v2, v4
+  [04ca] const/4              v3, #1
+  [04cb] goto/16              
+  [04cd] move-exception       
+  [04ce] move-object          v1, v0
+  [04cf] move                 v2, v4
+  [04d0] const/4              v3, #1
+  [04d1] goto/16              
+  [04d3] move-exception       
+  [04d4] move-object          v1, v0
+  [04d5] goto/16              
+  [04d7] move-exception       
+  [04d8] move-object          v1, v0
+  [04d9] goto/16              
+  [04db] move-exception       
+  [04dc] move-object          v1, v0
+  [04dd] const/4              v3, #1
+  [04de] goto/16              
+  [04e0] move-exception       
+  [04e1] move-object          v1, v0
+  [04e2] const/4              v3, #1
+  [04e3] goto/16              
+  [04e5] move-exception       
+  [04e6] move-object          v1, v0
+  [04e7] const/4              v3, #1
+  [04e8] goto/16              
+  [04ea] new-instance         v1, Ljava/security/cert/CertificateEncodingException;
+  [04ec] invoke-direct        {v1}, Ljava/security/cert/CertificateEncodingException;-><init>  (argc=1)
+  [04ef] throw                
+  [04f0] new-instance         v1, Ljava/util/concurrent/RejectedExecutionException;
+  [04f2] invoke-direct        {v1}, Ljava/util/concurrent/RejectedExecutionException;-><init>  (argc=1)
+  [04f5] throw                
+  [04f6] move-exception       
+  [04f7] move-object          v1, v0
+  [04f8] move                 v2, v12
+  [04f9] goto/16              
+  [04fb] move-exception       
+  [04fc] move-object          v1, v0
+  [04fd] move                 v2, v12
+  [04fe] goto/16              
+  [0500] move-exception       
+  [0501] move-object          v1, v0
+  [0502] move                 v2, v12
+  [0503] const/4              v3, #1
+  [0504] goto/16              
+  [0506] move-exception       
+  [0507] move-object          v1, v0
+  [0508] move                 v2, v12
+  [0509] const/4              v3, #1
+  [050a] goto/16              
+  [050c] move-exception       
+  [050d] move-object          v1, v0
+  [050e] move                 v2, v12
+  [050f] const/4              v3, #1
+  [0510] goto/16              
+  [0512] move-exception       
+  [0513] move-object          v1, v0
+  [0514] move                 v2, v10
+  [0515] goto                 
+  [0516] move-exception       
+  [0517] move-object          v1, v0
+  [0518] move                 v2, v10
+  [0519] goto                 
+  [051a] move-exception       
+  [051b] move-object          v1, v0
+  [051c] move                 v2, v10
+  [051d] const/4              v3, #1
+  [051e] goto                 
+  [051f] move-exception       
+  [0520] move-object          v1, v0
+  [0521] move                 v2, v10
+  [0522] const/4              v3, #1
+  [0523] goto                 
+  [0524] move-exception       
+  [0525] move-object          v1, v0
+  [0526] move                 v2, v10
+  [0527] const/4              v3, #1
+  [0528] goto                 
+  [0529] move-exception       
+  [052a] move-object          v1, v0
+  [052b] move                 v2, v7
+  [052c] const/4              v3, #1
+  [052d] goto                 
+  [052e] move-exception       
+  [052f] move-object          v1, v0
+  [0530] move                 v2, v7
+  [0531] const/4              v3, #1
+  [0532] goto                 
+  [0533] move-exception       
+  [0534] move-object          v1, v0
+  [0535] move                 v2, v7
+  [0536] const/4              v3, #1
+  [0537] goto                 
+  [0538] move-exception       
+  [0539] move-object          v1, v0
+  [053a] move                 v2, v7
+  [053b] const/4              v3, #0
+  [053c] return               v3
+  [053d] move-exception       
+  [053e] move-object          v1, v0
+  [053f] move                 v2, v7
+  [0540] const/4              v3, #1
+  [0541] sput-boolean         v3, Lcom/mobisec/upos/MainActivity;->g4
+  [0543] goto                 
+  [0544] move-exception       
+  [0545] const/4              v3, #1
+  [0546] move-object          v1, v0
+  [0547] move                 v2, v7
+  [0548] sput-boolean         v3, Lcom/mobisec/upos/MainActivity;->g3
+  [054a] goto                 
+  [054b] move-exception       
+  [054c] const/4              v3, #1
+  [054d] move-object          v1, v0
+  [054e] move                 v2, v7
+  [054f] sput-boolean         v3, Lcom/mobisec/upos/MainActivity;->g1
+  [0551] goto                 
+  [0552] move-exception       
+  [0553] const/4              v3, #1
+  [0554] move-object          v1, v0
+  [0555] move                 v2, v7
+  [0556] sput-boolean         v3, Lcom/mobisec/upos/MainActivity;->g2
+  [0558] nop                  
+  [0559] const/4              v1, #0
+  [055a] return               v1

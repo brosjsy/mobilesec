@@ -1,0 +1,4 @@
+gnirts has no standalone Android Studio project or Report.pdf of its own --
+it was solved with the same brute-force script family as BabyRev/Pincode.
+Its write-up is included inside 'Challenge 01 BabyRev - Report.pdf' in this
+same folder, and as its own section in the master report.

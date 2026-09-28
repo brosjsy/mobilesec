@@ -1,0 +1,76 @@
+Java_com_mobisec_gonative_FlagChecker_helloFromTheOtherSide 0x790 274
+text 0x720 0x720 388
+790:	push	rbp
+791:	push	r15
+793:	push	r14
+795:	push	rbx
+796:	sub	rsp, 0x18
+79a:	mov	ebp, ecx
+79c:	mov	r14, rdx
+79f:	mov	rbx, rdi
+7a2:	mov	rax, qword ptr fs:[0x28]
+7ab:	mov	qword ptr [rsp + 0x10], rax
+7b0:	mov	rax, qword ptr [rdi]
+7b3:	xor	edx, edx
+7b5:	mov	rsi, r14
+7b8:	call	qword ptr [rax + 0x548]
+7be:	mov	r15, rax
+7c1:	mov	rdi, rax
+7c4:	call	0x6d0
+7c9:	cmp	rax, 0xc
+7cd:	jne	0x86c
+7d3:	cmp	ebp, 0x7a69
+7d9:	jne	0x86c
+7df:	cmp	byte ptr [r15], 0x6e
+7e3:	jne	0x86c
+7e9:	cmp	byte ptr [r15 + 0xb], 0x6f
+7ee:	jne	0x86c
+7f0:	lea	rsi, [r15 + 1]
+7f4:	lea	rbp, [rsp + 0xa]
+7f9:	mov	edx, 5
+7fe:	mov	rdi, rbp
+801:	call	0x6e0
+806:	mov	byte ptr [rsp + 0xf], 0
+80b:	lea	rdi, [rip + 0x92]
+812:	mov	edx, 5
+817:	mov	rsi, rbp
+81a:	call	0x6f0
+81f:	test	eax, eax
+821:	jne	0x86c
+823:	cmp	byte ptr [r15 + 9], 0x5f
+828:	jne	0x86c
+82a:	cmp	byte ptr [r15 + 6], 0x5f
+82f:	jne	0x86c
+831:	cmp	byte ptr [r15 + 7], 0x69
+836:	jne	0x86c
+838:	cmp	byte ptr [r15 + 8], 0x73
+83d:	jne	0x86c
+83f:	mov	rsi, r15
+842:	add	rsi, 0xa
+846:	lea	rdi, [rip + 0x5d]
+84d:	call	0x700
+852:	test	eax, eax
+854:	sete	bpl
+858:	mov	rax, qword ptr [rbx]
+85b:	mov	rdi, rbx
+85e:	mov	rsi, r14
+861:	mov	rdx, r15
+864:	call	qword ptr [rax + 0x550]
+86a:	jmp	0x880
+86c:	mov	rax, qword ptr [rbx]
+86f:	mov	rdi, rbx
+872:	mov	rsi, r14
+875:	mov	rdx, r15
+878:	call	qword ptr [rax + 0x550]
+87e:	xor	ebp, ebp
+880:	mov	rax, qword ptr fs:[0x28]
+889:	cmp	rax, qword ptr [rsp + 0x10]
+88e:	jne	0x89d
+890:	mov	eax, ebp
+892:	add	rsp, 0x18
+896:	pop	rbx
+897:	pop	r14
+899:	pop	r15
+89b:	pop	rbp
+89c:	ret	
+89d:	call	0x710

@@ -1,0 +1,194 @@
+4:  [0004] const-string         v3, " "
+5:  [0006] const-string         v4, "mayb"
+10:  [0010] const/16             v5, #200
+14:  [0019] const/4              v7, #0
+15:  [001a] const/4              v8, #0
+20:  [0024] const/16             v11, #69
+21:  [0026] if-eq                v10, v11, +3 (target unit 41)
+23:  [0029] add-int/lit8         v10, v7, #1
+24:  [002b] const-string         v11, "MOBISEC{"
+25:  [002d] invoke-virtual       {v2, v11}, Ljava/lang/String;->startsWith  (argc=2)
+28:  [0033] const/16             v7, #8
+31:  [0039] add-int/lit8         v12, v10, #1
+32:  [003b] const-string         v13, "}"
+33:  [003d] invoke-virtual       {v11, v13}, Ljava/lang/String;->endsWith  (argc=2)
+36:  [0043] const/4              v10, #1
+39:  [0049] if-eqz               v15, +3 (target unit 76)
+43:  [0052] add-int/lit8         v15, v12, #1
+44:  [0054] const-string         v7, "this_is_"
+45:  [0056] invoke-virtual       {v11, v7}, Ljava/lang/String;->startsWith  (argc=2)
+48:  [005c] add-int/lit8         v7, v15, #1
+49:  [005e] const-string         v12, "upos"
+50:  [0060] invoke-virtual       {v11, v12}, Ljava/lang/String;->endsWith  (argc=2)
+53:  [0066] add-int/lit8         v12, v7, #1
+54:  [0068] const/16             v15, #10
+55:  [006a] invoke-virtual       {v11, v15}, Ljava/lang/String;->charAt  (argc=2)
+57:  [006e] const/16             v14, #99
+58:  [0070] const/16             v15, #13
+59:  [0072] if-eq                v9, v14, +13 (target unit 127)
+60:  [0074] invoke-virtual       {v11, v15}, Ljava/lang/String;->charAt  (argc=2)
+62:  [0078] const/16             v14, #113
+63:  [007a] if-ne                v9, v14, +3 (target unit 125)
+65:  [007d] const/4              v9, #0
+67:  [007f] const/4              v9, #1
+69:  [0082] add-int/lit8         v7, v12, #1
+70:  [0084] const/4              v9, #3
+71:  [0085] invoke-virtual       {v11, v9}, Ljava/lang/String;->charAt  (argc=2)
+73:  [0089] const/4              v14, #7
+74:  [008a] invoke-virtual       {v11, v14}, Ljava/lang/String;->charAt  (argc=2)
+76:  [008e] add-int/2addr        
+77:  [008f] const/16             v14, #114
+78:  [0091] if-ne                v9, v14, +4 (target unit 149)
+79:  [0093] const/4              v9, #1
+81:  [0095] const/4              v9, #0
+84:  [009b] add-int/lit8         v9, v7, #1
+85:  [009d] const-string         v12, "really_"
+86:  [009f] invoke-virtual       {v11, v12}, Ljava/lang/String;->contains  (argc=2)
+89:  [00a5] const/4              v7, #0
+109:  [00d2] const-string         v12, "
+110:"
+114:  [00d9] const/4              v15, #0
+133:  [0104] const-string         v14, "/"
+137:  [010e] const-string         v2, "/maps"
+149:  [0128] invoke-virtual       {v13, v2}, Ljava/lang/String;->contains  (argc=2)
+151:  [012c] if-eqz               v2, +4 (target unit 304)
+152:  [012e] const/4              v7, #1
+154:  [0130] add-int/lit8         v15, v15, #1
+158:  [0138] add-int/lit8         v2, v9, #1
+160:  [013c] add-int/lit8         v3, v2, #-1
+162:  [0140] if-nez               v3, +253 (target unit 573)
+164:  [0145] add-int/lit8         v3, v2, #1
+165:  [0147] const/16             v9, #14
+168:  [014d] const-string         v9, "_evil"
+169:  [014f] invoke-virtual       {v12, v9}, Ljava/lang/String;->endsWith  (argc=2)
+172:  [0155] add-int/lit8         v2, v3, #1
+173:  [0157] const/16             v9, #9
+174:  [0159] const/16             v12, #13
+177:  [015f] const-string         v12, "bam"
+178:  [0161] invoke-virtual       {v9, v12}, Ljava/lang/String;->endsWith  (argc=2)
+183:  [016c] if-eqz               v3, +4 (target unit 368)
+184:  [016e] const/4              v3, #0
+190:  [0178] const/16             v8, #128
+193:  [017e] const/4              v7, #0
+198:  [0187] if-eqz               v9, +30 (target unit 421)
+208:  [019c] invoke-virtual       {v12, v13}, Ljava/lang/String;->equals  (argc=2)
+210:  [01a0] if-eqz               v12, +4 (target unit 420)
+211:  [01a2] const/4              v7, #1
+214:  [01a5] add-int/lit8         v8, v2, #1
+217:  [01ac] add-int/lit8         v2, v8, #1
+218:  [01ae] const/4              v9, #4
+219:  [01af] const/16             v12, #10
+224:  [01b9] const-string         v12, "incred"
+225:  [01bb] invoke-virtual       {v9, v12}, Ljava/lang/String;->equals  (argc=2)
+229:  [01c3] if-eqz               v8, +4 (target unit 455)
+230:  [01c5] const/4              v4, #0
+237:  [01d2] if-eqz               v8, +20 (target unit 486)
+259:  [01f9] const/4              v3, #1
+264:  [01ff] const/4              v3, #1
+269:  [0205] const/4              v3, #1
+290:  [021f] const/4              v3, #1
+295:  [0225] const/4              v3, #1
+300:  [022b] const/4              v3, #1
+340:  [025e] const/4              v3, #1
+345:  [0264] const/4              v3, #1
+350:  [026a] const/4              v3, #1
+368:  [027f] const/4              v3, #0
+389:  [0296] const/4              v3, #1
+394:  [029c] const/4              v3, #1
+399:  [02a2] const/4              v3, #1
+412:  [02b0] const/4              v3, #0
+417:  [02b5] add-int/lit8         v7, v9, #1
+418:  [02b7] const/16             v3, #22
+423:  [02c1] invoke-virtual       {v3, v4}, Ljava/lang/String;->startsWith  (argc=2)
+427:  [02ca] add-int/lit8         v3, v7, #-3
+429:  [02ce] if-eqz               v3, +546 (target unit 1264)
+431:  [02d2] if-eqz               v3, +7 (target unit 729)
+433:  [02d7] const/4              v3, #0
+448:  [02f6] const/4              v9, #0
+452:  [02fd] const/4              v12, #0
+463:  [030f] const/4              v8, #0
+465:  [0312] add-int/lit8         v7, v7, #1
+466:  [0314] add-int/lit8         v3, v7, #-1
+468:  [0318] if-nez               v3, +466 (target unit 1258)
+469:  [031a] const/4              v10, #0
+471:  [031c] if-eqz               v10, +4 (target unit 800)
+472:  [031e] const/4              v3, #0
+474:  [0320] add-int/lit8         v7, v2, #1
+477:  [0326] const/16             v8, #11
+478:  [0328] const/16             v9, #14
+481:  [032e] const/4              v8, #1
+482:  [032f] invoke-virtual       {v3, v8}, Ljava/lang/String;->charAt  (argc=2)
+484:  [0333] const/16             v8, #52
+485:  [0335] if-ne                v3, v8, +4 (target unit 825)
+486:  [0337] const/4              v3, #1
+488:  [0339] const/4              v3, #0
+490:  [033c] add-int/lit8         v2, v7, #1
+491:  [033e] const/16             v3, #22
+496:  [0348] invoke-virtual       {v3, v4}, Ljava/lang/String;->startsWith  (argc=2)
+503:  [0356] const/16             v7, #64
+504:  [0358] const/4              v8, #0
+513:  [0366] const/4              v12, #0
+519:  [0372] const/4              v14, #0
+520:  [0373] const-string         v15, "X509"
+528:  [0380] const/4              v15, #0
+537:  [0390] const/16             v18, #0
+538:  [0392] const-string         v19, "SHA1"
+581:  [03d7] add-int/lit8         v4, v2, #1
+586:  [03e2] invoke-virtual       {v3, v7}, Ljava/lang/String;->equals  (argc=2)
+589:  [03e8] add-int/lit8         v2, v4, #-1
+591:  [03ec] if-eqz               v2, +197 (target unit 1201)
+592:  [03ee] const/4              v2, #0
+594:  [03f1] if-eqz               v7, +190 (target unit 1199)
+595:  [03f3] const/4              v2, #1
+597:  [03f6] if-nez               v7, +4 (target unit 1018)
+599:  [03fa] const/16             v2, #100
+600:  [03fc] const/4              v4, #0
+602:  [03fe] const/16             v2, #30
+604:  [0402] const/4              v2, #1
+609:  [040c] invoke-virtual       {v11, v1}, Ljava/lang/String;->charAt  (argc=2)
+615:  [0419] const/16             v17, #1
+616:  [041b] add-int/lit8         v1, v1, #1
+617:  [041d] invoke-virtual       {v11, v1}, Ljava/lang/String;->charAt  (argc=2)
+626:  [0430] if-eqz               v2, +11 (target unit 1083)
+627:  [0432] const/4              v2, #0
+630:  [0438] add-int/lit8         v2, v2, #1
+639:  [044a] const/16             v16, #8
+649:  [045e] if-eqz               v25, +44 (target unit 1162)
+650:  [0460] add-int/lit8         v23, v7, #1
+651:  [0462] const/16             v21, #0
+666:  [0479] const/4              v3, #1
+671:  [0480] const/4              v3, #1
+676:  [0487] const/4              v3, #1
+678:  [048a] add-int/lit8         v7, v7, #1
+679:  [048c] add-int/lit8         v4, v4, #1
+682:  [0492] add-int/lit8         v1, v7, #-30
+685:  [0498] if-nez               v2, +4 (target unit 1180)
+686:  [049a] const/4              v2, #0
+688:  [049c] add-int/lit8         v1, v1, #1
+692:  [04a3] const-string         v2, "4193d9b72a5c4805e9a5cc739f8a8fc23b2890e13b83bb887d96f86c30654a12"
+693:  [04a5] invoke-virtual       {v1, v2}, Ljava/lang/String;->equals  (argc=2)
+695:  [04a9] if-nez               v1, +4 (target unit 1197)
+696:  [04ab] const/4              v1, #0
+698:  [04ad] const/4              v1, #1
+700:  [04af] const/4              v1, #0
+716:  [04c4] const/4              v3, #1
+721:  [04ca] const/4              v3, #1
+726:  [04d0] const/4              v3, #1
+736:  [04dd] const/4              v3, #1
+740:  [04e2] const/4              v3, #1
+744:  [04e7] const/4              v3, #1
+763:  [0503] const/4              v3, #1
+768:  [0509] const/4              v3, #1
+773:  [050f] const/4              v3, #1
+786:  [051d] const/4              v3, #1
+791:  [0522] const/4              v3, #1
+796:  [0527] const/4              v3, #1
+801:  [052c] const/4              v3, #1
+806:  [0531] const/4              v3, #1
+811:  [0536] const/4              v3, #1
+816:  [053b] const/4              v3, #0
+821:  [0540] const/4              v3, #1
+825:  [0545] const/4              v3, #1
+831:  [054c] const/4              v3, #1
+837:  [0553] const/4              v3, #1
+842:  [0559] const/4              v1, #0
